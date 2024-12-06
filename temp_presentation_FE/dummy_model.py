@@ -55,7 +55,7 @@ def predict(input_features):
 
 if __name__ == "__main__":
     # Test the model predictions with a sample input
-    test_input = "1,1,1,25,0,0,1,1,0,1"  # Example input with selected features
+    test_input = "1,4,1,18,1,11,0,0,0,0"  # Example input with selected features
     processed_input = preprocess_input(test_input)
     prediction, probabilities = predict(processed_input)
 

@@ -23,7 +23,7 @@ metadata = [
     {"name": "MentHlth", "description": "Number of days mental health not good in past 30 days (scale 1-30 days)"},
     {"name": "NoDocbcCost", "description": "Could not see a doctor because of cost in the past 12 months 0 = no, 1 = yes"},
     {"name": "PhysHlth", "description": "Number of days physical health not good in past 30 days (scale 1-30 days)"},
-    {"name": "BMI", "description": "Body Mass Index (numeric)/n"}
+    {"name": "BMI", "description": "Body Mass Index (numeric) BMI levels include underweight (<18.5), normal weight (18.5-24.9), overweight (25-29.9), and obese (≥30)"}
 ]
 
 @app.route("/")
