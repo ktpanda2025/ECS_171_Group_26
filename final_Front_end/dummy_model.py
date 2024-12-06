@@ -11,11 +11,11 @@ from imblearn.over_sampling import SMOTE
 cdc_diabetes_health_indicators = fetch_ucirepo(id=891)
 
 # data (as pandas dataframes)
-X = cdc_diabetes_health_indicators.data.features
+x = cdc_diabetes_health_indicators.data.features
 y = cdc_diabetes_health_indicators.data.targets
 
 # create pandas dataframe
-df = pd.concat([X, y], axis=1)
+df = pd.concat([x, y], axis=1)
 
 # Define features (X) and target (y)
 selected_features = [
@@ -47,12 +47,82 @@ best_model = grid_result.best_estimator_
 best_model.fit(X, y)
 
 # Save the best model
-joblib.dump(best_model, "best_logistic_model.pkl")
+joblib.dump(best_model, "best_logistic_model_1.pkl")
+
+
+############################################################################################################
+# X_train, X_test, y_train, y_test = train_test_split(
+#     X, y, test_size=0.2, random_state=42
+# )
+
+
+# from sklearn.metrics import (
+#     accuracy_score,
+#     classification_report,
+#     confusion_matrix,
+#     roc_auc_score,
+#     roc_curve,
+#     precision_recall_curve,
+# )
+# import matplotlib.pyplot as plt
+
+# # Create and train the Logistic Regression model
+
+# log_reg = LogisticRegression(
+#     penalty = 'l2',
+#     C = 1,
+#     random_state=42,
+#     max_iter=1000,
+#     solver='liblinear',
+#     class_weight=None
+# )
+# log_reg.fit(X_train, y_train)
+
+# # Make predictions
+# y_pred_proba = log_reg.predict_proba(X_test)[:, 1]
+# y_pred = log_reg.predict(X_test)
+
+# # Evaluate the model
+# accuracy = accuracy_score(y_test, y_pred)
+# print(f"\nModel Accuracy: {accuracy:.4f}")
+
+# print("\nClassification Report:")
+# print(classification_report(y_test, y_pred))
+
+# print("Confusion Matrix:")
+# print(confusion_matrix(y_test, y_pred))
+
+# roc_auc = roc_auc_score(y_test, y_pred_proba)
+# print(f"\nROC AUC Score: {roc_auc:.4f}")
+
+# # Plot ROC Curve
+# fpr, tpr, thresholds = roc_curve(y_test, y_pred_proba)
+# plt.figure(figsize=(8, 6))
+# plt.plot(fpr, tpr, label=f"Logistic Regression (AUC = {roc_auc:.4f})")
+# plt.plot([0, 1], [0, 1], 'k--')
+# plt.xlabel("False Positive Rate")
+# plt.ylabel("True Positive Rate")
+# plt.title("ROC Curve")
+# plt.legend()
+# plt.show()
+
+# # Plot Precision-Recall Curve
+# precision, recall, thresholds_pr = precision_recall_curve(y_test, y_pred_proba)
+# plt.figure(figsize=(8, 6))
+# plt.plot(recall, precision, label="Logistic Regression")
+# plt.xlabel("Recall")
+# plt.ylabel("Precision")
+# plt.title("Precision-Recall Curve")
+# plt.legend()
+# plt.show()
+
+############################################################################################################
+
 
 # Define functions for your app
 def load_model():
     """Load the pre-trained model."""
-    return joblib.load("logistic_model.pkl")
+    return joblib.load("best_logistic_model_1.pkl")
 
 def preprocess_input(input_data):
     """
