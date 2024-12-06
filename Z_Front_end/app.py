@@ -42,11 +42,19 @@ def predict():
     # Predict using the model
     predicted_class, probabilities = dummy_model.predict(input_features)
 
+    diab = ""
+
+    if predicted_class == 0:
+        diab = "Low Risk"
+    else:
+        diab = "High Risk"
+
+
     return render_template(
         "results.html",
-        prediction=predicted_class,
-        prob_class_0=probabilities[0],
-        prob_class_1=probabilities[1],
+        prediction=diab,
+        prob_class_0=str(np.round(probabilities[0],2) * 100) + '%',
+        prob_class_1=str(np.round(probabilities[1],2)*100) + '%' ,
     )
 
 if __name__ == "__main__":
