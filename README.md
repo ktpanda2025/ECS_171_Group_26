@@ -14,7 +14,7 @@ scdeshpande@ucdavis.edu
 The app contain these librareis: ucimlrepo sklearn pandas imblearn matplotlib flask
 
 steps 
-1. cd final_Front_end/app.py
+1. cd ECS_171_Group_26/final_Front_end
 2. python app.py
 
 then http://127.0.0.1:5000 on your browser
