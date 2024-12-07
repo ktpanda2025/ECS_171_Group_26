@@ -11,12 +11,10 @@ atdeepak@ucdavis.edu
 scdeshpande@ucdavis.edu
 
 
-To run app you will need to install "pip install fetch_ucirepo" (maybe we should just downlaod the data to a csv)
-
-python3 or python app.py in the command line after you located the flask_ml_gui folder:
+The app contain these librareis: ucimlrepo sklearn pandas imblearn matplotlib flask
 
 steps 
-1. cd flask_ml_gui 
+1. cd final_Front_end/app.py
 2. python app.py
 
 then http://127.0.0.1:5000 on your browser
