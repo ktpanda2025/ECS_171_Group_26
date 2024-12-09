@@ -11,11 +11,11 @@ atdeepak@ucdavis.edu
 scdeshpande@ucdavis.edu
 
 
-The app contain these librareis: ucimlrepo sklearn pandas imblearn matplotlib flask numpy
+The app contain these librareis: ucimlrepo sklearn pandas imblearn matplotlib flask numpy joblib
 
 step: 
 ------- only if you want VR envioment---------
-- conda create -n group_26 python=3.12.2  scikit-learn flask matplotlib pandas conda-forge::imbalanced-learn ucimlrepo numpy
+- conda create -n group_26 python=3.12.2  scikit-learn flask matplotlib pandas conda-forge::imbalanced-learn ucimlrepo numpy joblib
 - conda activate group_26 
 -------------------------
 - cd ECS_171_Group_26/final_Front_end
