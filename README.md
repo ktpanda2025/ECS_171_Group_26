@@ -2,6 +2,7 @@
  ECS 171 project Fall 2024 for group 26
 
 Predicting diabetes
+Video demo: https://youtu.be/QEgsOqNGO9I
 
  **email list** : 
 sunliu@ucdavis.edu
@@ -13,7 +14,7 @@ scdeshpande@ucdavis.edu
 
 The app contain these librareis: ucimlrepo sklearn pandas imblearn matplotlib flask numpy joblib
 
-step: 
+steps: 
 ------- only if you want VR envioment---------
 - conda create -n group_26 python=3.12.2  scikit-learn flask matplotlib pandas conda-forge::imbalanced-learn ucimlrepo numpy joblib
 - conda activate group_26 
